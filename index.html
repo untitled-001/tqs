@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <div id="r" style="display: none></div>
     <script type="module">
-        import init, {B} from "/tqs/o.js";
+        import init, {B} from "/o.js";
         init().then(()=>{
-            window.a = new B().gb()
+            document.getElementById('r').textContent = new B().gb()
         });
     </script>
 </body>
 </html>
-
