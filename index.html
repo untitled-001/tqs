@@ -6,9 +6,13 @@
 <body>
     <div id="r" style="display: none;"></div>
     <script type="module">
-        import init, {B} from "/tqs/o.js";
-        init().then(()=>{
-            document.getElementById('r').textContent = new B().gb()
+        import init, { B } from "/tqs/o.js";
+        async function uv() {
+            document.getElementById('r').textContent = await new B().gb();
+        }
+        init().then(() => {
+            uv();
+            setInterval(uv, 500);
         });
     </script>
 </body>
